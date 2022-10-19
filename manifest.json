@@ -1,5 +1,5 @@
 {
-   "name": "Twitch small window",
+   "name": "Twitch Miniplayer",
    "version": "1.0",
    "manifest_version": 3,
    "description": "Mute the ads and set volume on twitch miniplayer",
@@ -16,7 +16,7 @@
    "action": {
       "default_popup": "popup.html",
       "default_icon": "images/icon.png",
-      "default_title": "Twitch small window"
+      "default_title": "Twitch Miniplayer"
    },
    "permissions": ["storage"],
    "host_permissions": [
