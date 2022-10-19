@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Twitch Miniplayer</title>
+   <!-- <link rel="stylesheet" href="css/app.css" /> -->
+   <script src="popup.js"></script>
+   <style>
+      body {
+         width: 250px;
+         margin: 0px;
+         padding: 0px;
+      }
+
+      h1 {
+         text-align: center;
+         font-size: 20px;
+         margin: 0;
+         padding: 8px 0;
+         background: rgb(206, 32, 32);
+         color: white;
+         margin-bottom: 10px;
+      }
+
+      .row {
+         font-size: 14px;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: nowrap;
+         margin: 0px 10px;
+      }
+
+      .centered {
+         justify-content: center;
+      }
+
+      .pad-left {
+         padding-left: 5px;
+         padding-top: 5px;
+         padding-bottom: 5px;
+      }
+
+      .pad-left input {
+         filter: hue-rotate(160deg);
+      }
+
+      .row.update {
+         background-color: orange;
+         margin-top: -3px;
+         font-weight: bold;
+      }
+
+      .hidden {
+         display: none;
+      }
+
+      .version {
+         margin-bottom: 10px;
+      }
+
+      .version a {
+         color: rgb(206, 32, 32);
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+         outline: none;
+         border: none;
+      }
+
+      /* Firefox */
+      input[type=number] {
+         width: 30px;
+         -moz-appearance: textfield;
+         outline: none;
+         border: none;
+         border-bottom: 1px solid black;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Twitch Miniplayer</h1>
+   <div class="row">
+      <div>Options:</div>
+   </div>
+   <div class="row pad-left">
+      <div><input type="checkbox" id="mute_all_ads"></div>
+      <div>Mute Ads</div>
+   </div>
+   <div class="row centered">
+      <div>--------------------------------</div>
+   </div>
+   <div class="row centered version">
+      <div>v.1.0 - Made by <a href="https://salvagr.com">@salvagr</a></div>
+   </div>
+</body>
+
+</html>

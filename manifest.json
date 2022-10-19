@@ -1,0 +1,31 @@
+{
+   "name": "Twitch small window",
+   "version": "1.0",
+   "manifest_version": 3,
+   "description": "Mute the ads and set volume on small window",
+   "content_scripts": [
+      {
+         "matches": [
+            "https://*.twitch.tv/*",
+            "https://twitch.tv/*"
+         ],
+         "exclude_matches": ["https://clips.twitch.tv/*"],
+         "js": ["jquery-3.3.1.min.js","content.js"]
+      }
+   ],
+   "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/icon.png",
+      "default_title": "Twitch small window"
+   },
+   "permissions": ["storage"],
+   "host_permissions": [
+      "https://twitch.tv/"
+    ],
+   "icons": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+   }
+}
