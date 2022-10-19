@@ -2,7 +2,7 @@
    "name": "Twitch small window",
    "version": "1.0",
    "manifest_version": 3,
-   "description": "Mute the ads and set volume on small window",
+   "description": "Mute the ads and set volume on twitch miniplayer",
    "content_scripts": [
       {
          "matches": [
