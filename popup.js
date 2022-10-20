@@ -24,12 +24,4 @@ window.addEventListener('load', () => {
          });
       }
    })
-
-   // fetch('https://raw.githubusercontent.com/LasTechLabs/ttv-ad-compromiser/main/manifest.json')
-   // 	.then(response => response.json())
-   // 	.then(data => {
-   // 		if (data.version != version) {
-   // 			document.getElementsByClassName("hidden")[0].classList.remove('hidden')
-   // 		}
-   // 	});
 })
