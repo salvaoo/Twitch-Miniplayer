@@ -14,6 +14,7 @@ window.addEventListener('load', () => {
    });
 
    inpt_muteAll.addEventListener('change', (e) => {
+      // Changing the value from checkbox (mute ads)
       if (e.target.checked) {
          chrome.storage.local.set({ muteAll: true }, function () {
             console.log('Value is set to ' + true);
