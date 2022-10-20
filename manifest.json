@@ -19,9 +19,6 @@
       "default_title": "Twitch Miniplayer"
    },
    "permissions": ["storage"],
-   "host_permissions": [
-      "https://twitch.tv/"
-    ],
    "icons": {
       "16": "images/icon.png",
       "32": "images/icon.png",
