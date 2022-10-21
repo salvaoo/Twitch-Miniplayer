@@ -27,7 +27,7 @@ $(function () {
             labelAd = $("[data-a-target=video-ad-label]");
 
             if (labelAd.length > 0) { // Ads running
-               if (mute = 0) {
+               if (mute == 0) {
                   mute = 1;
                   if (result.muteAll) { // if user checked "muted ads" button
                      if (videos[0].volume > 0) { // if main video is not muted
