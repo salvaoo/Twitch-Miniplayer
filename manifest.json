@@ -1,6 +1,6 @@
 {
    "name": "Twitch Miniplayer",
-   "version": "1.0",
+   "version": "1.1",
    "manifest_version": 3,
    "description": "Mute the ads and set volume on twitch miniplayer",
    "content_scripts": [
