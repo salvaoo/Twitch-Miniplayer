@@ -27,15 +27,17 @@ $(function () {
             labelAd = $("[data-a-target=video-ad-label]");
 
             if (labelAd.length > 0) { // Ads running
-               mute = 1;
-               if (result.muteAll) { // if user checked "muted ads" button
-                  if (videos[0].volume > 0) { // if main video is not muted
-                     videos[0].muted = true; // MUTED
+               if (mute = 0) {
+                  mute = 1;
+                  if (result.muteAll) { // if user checked "muted ads" button
+                     if (videos[0].volume > 0) { // if main video is not muted
+                        videos[0].muted = true; // MUTED
+                     }
                   }
+                  videos[1].volume = videos[0].volume; // set the same volume than main video in small window
+                  videos[1].muted = false; // set the volume in small window
+                  // videos[1].controls = true;
                }
-               videos[1].muted = false; // set the volume in small window
-               // videos[1].controls = true;
-               videos[1].volume = videos[0].volume; // set the same volume than main video in small window
             } else if(mute == 1) { // Ads ended
                mute = 0;
                if (result.muteAll) {
