@@ -3,6 +3,7 @@ $(function () {
       let videos;
       let loop;
       let labelAd;
+      let vol;
       var mute = 0;
 
       videos = document.getElementsByTagName('video');
@@ -29,20 +30,22 @@ $(function () {
             if (labelAd.length > 0) { // Ads running
                if (mute == 0) {
                   mute = 1;
+                  vol = videos[0].volume;
                   if (result.muteAll) { // if user checked "muted ads" button
                      if (videos[0].volume > 0) { // if main video is not muted
                         videos[0].muted = true; // MUTED
                      }
                   }
+                  videos[1].controls = true; // enable the controls in miniplayer
                   videos[1].muted = false; // set the volume in small window
-                  // videos[1].controls = true;
-                  videos[1].volume = videos[0].volume; // set the same volume than main video in small window
+                  videos[1].volume = vol; // set the same volume than main video in small window
                }
             } else if(mute == 1) { // Ads ended
                mute = 0;
                if (result.muteAll) {
                   videos[0].muted = false; // UNMUTED
                }
+               videos[1].muted = true;
             }
          });
       }, 1000)
