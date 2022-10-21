@@ -1,4 +1,4 @@
-let version = "1.2"
+let version = "1.2.1"
 let inpt_muteAll;
 
 window.addEventListener('click', function (e) {
