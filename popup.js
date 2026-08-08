@@ -1,28 +1,22 @@
-let version = "1.2.2"
-let inpt_muteAll;
-
-window.addEventListener('click', function (e) {
-   if (e.target.href !== undefined) {
-      chrome.tabs.create({ url: e.target.href })
-   }
-})
+window.addEventListener('click', (e) => {
+  if (e.target.href !== undefined) {
+    chrome.tabs.create({ url: e.target.href });
+  }
+});
 
 window.addEventListener('load', () => {
-   inpt_muteAll = document.getElementsByTagName('input')[0]
-   inpt_muteAll.checked = chrome.storage.local.get({ muteAll: true }, function (data) {
-      inpt_muteAll.checked = data.muteAll
-   });
+  const muteAllInput = document.getElementById('mute_all_ads');
+  const versionEl = document.getElementById('version');
 
-   inpt_muteAll.addEventListener('change', (e) => {
-      // Changing the value from checkbox (mute ads)
-      if (e.target.checked) {
-         chrome.storage.local.set({ muteAll: true }, function () {
-            console.log('Value is set to ' + true);
-         });
-      } else if (!e.target.checked) {
-         chrome.storage.local.set({ muteAll: false }, function () {
-            console.log('Value is set to ' + false);
-         });
-      }
-   })
-})
+  if (versionEl) {
+    versionEl.textContent = `v.${chrome.runtime.getManifest().version}`;
+  }
+
+  chrome.storage.local.get({ muteAll: true }, (data) => {
+    muteAllInput.checked = data.muteAll !== false;
+  });
+
+  muteAllInput.addEventListener('change', (e) => {
+    chrome.storage.local.set({ muteAll: e.target.checked });
+  });
+});
